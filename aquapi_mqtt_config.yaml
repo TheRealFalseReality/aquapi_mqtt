@@ -16,6 +16,7 @@ packages:
   TheRealFalseReality.ezo_do: github://TheRealFalseReality/aquapi/common/ezo_do.yaml
   TheRealFalseReality.ezo_pmp: github://TheRealFalseReality/aquapi/common/ezo_pmp.yaml
   TheRealFalseReality.ezo_pmp_duo: github://TheRealFalseReality/aquapi/common/ezo_pmp_duo.yaml
+  TheRealFalseReality.secrets: github://TheRealFalseReality/MyESPHome/secrets.yaml@main
   # TheRealFalseReality.debug: github://TheRealFalseReality/aquapi/common/debug.yaml
 
 esp32:
