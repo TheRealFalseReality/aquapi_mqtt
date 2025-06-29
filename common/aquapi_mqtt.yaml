@@ -31,7 +31,7 @@ text_sensor:
     icon: mdi:github
     update_interval: '24h'
     lambda: |-
-      return {"github.com/TheRealFalseReality/aquapi"};
+      return {"github.com/TheRealFalseReality/aquapi_mqtt"};
     entity_category: "diagnostic"
     web_server:
       sorting_group_id: sorting_group_diagnostic
