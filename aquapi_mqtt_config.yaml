@@ -3,11 +3,11 @@ substitutions:
   app_version: "25.6.1"
 
 packages:  
+  ota_https: !include common/ota_https.yaml
   TheRealFalseReality.device_base: github://TheRealFalseReality/aquapi/common/device_base.yaml@main
-  aquapi_mqtt: github://TheRealFalseReality/MyESPHome/aquapi_mqtt.yaml@main
+  TheRealFalseReality.aquapi_mqtt_base: github://TheRealFalseReality/MyESPHome/aquapi_mqtt_base.yaml@main
   TheRealFalseReality.ph: github://TheRealFalseReality/aquapi/common/ezo_ph.yaml
   TheRealFalseReality.ec: github://TheRealFalseReality/aquapi/common/ezo_ec.yaml
-  ota_https: !include common/ota_https.yaml
   TheRealFalseReality.dallas: github://TheRealFalseReality/aquapi/common/temperature_dallas.yaml
   TheRealFalseReality.water_level: github://TheRealFalseReality/aquapi/common/water_level.yaml
   TheRealFalseReality.binary: github://TheRealFalseReality/aquapi/common/binary.yaml
