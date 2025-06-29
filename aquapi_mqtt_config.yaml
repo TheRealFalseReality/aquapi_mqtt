@@ -1,0 +1,45 @@
+substitutions:
+  # App Version
+  app_version: "25.6.1"
+
+packages:  
+  TheRealFalseReality.device_base: github://TheRealFalseReality/aquapi/common/device_base.yaml@main
+  aquapi_mqtt: !include common/aquapi_mqtt.yaml
+  TheRealFalseReality.ph: github://TheRealFalseReality/aquapi/common/ezo_ph.yaml
+  TheRealFalseReality.ec: github://TheRealFalseReality/aquapi/common/ezo_ec.yaml
+  ota_https: !include common/ota_https.yaml
+  TheRealFalseReality.dallas: github://TheRealFalseReality/aquapi/common/temperature_dallas.yaml
+  TheRealFalseReality.water_level: github://TheRealFalseReality/aquapi/common/water_level.yaml
+  TheRealFalseReality.binary: github://TheRealFalseReality/aquapi/common/binary.yaml
+  TheRealFalseReality.ezo_orp: github://TheRealFalseReality/aquapi/common/ezo_orp.yaml
+  TheRealFalseReality.ezo_co2: github://TheRealFalseReality/aquapi/common/ezo_co2.yaml
+  TheRealFalseReality.ezo_do: github://TheRealFalseReality/aquapi/common/ezo_do.yaml
+  TheRealFalseReality.ezo_pmp: github://TheRealFalseReality/aquapi/common/ezo_pmp.yaml
+  TheRealFalseReality.ezo_pmp_duo: github://TheRealFalseReality/aquapi/common/ezo_pmp_duo.yaml
+  # TheRealFalseReality.debug: github://TheRealFalseReality/aquapi/common/debug.yaml
+
+esp32:
+  framework:
+    type: esp-idf
+
+api: 
+  reboot_timeout: 0s
+    
+mqtt:
+  broker: thefalsehome.duckdns.org
+  # broker: homeassistant.local
+  port: 8883
+  username: mosquitto
+  password: !secret mqtt_password
+  discovery_prefix: ${mqtt_prefix}/homeassistant
+  log_topic: ${mqtt_prefix}/logs
+  skip_cert_cn_check: true
+  idf_send_async: false
+  certificate_authority: !secret certfile
+
+# Remove Incompatable Components
+light:
+  - id: !remove internal_led
+sensor:
+  - id: !remove hall_sensor
+  - id: !remove i2c_devices
