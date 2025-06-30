@@ -18,3 +18,29 @@ packages:
   TheRealFalseReality.ezo_pmp: github://TheRealFalseReality/aquapi/common/ezo_pmp.yaml
   TheRealFalseReality.ezo_pmp_duo: github://TheRealFalseReality/aquapi/common/ezo_pmp_duo.yaml
   # TheRealFalseReality.debug: github://TheRealFalseReality/aquapi/common/debug.yaml
+
+esp32:
+  framework:
+    type: esp-idf
+
+api: 
+  reboot_timeout: 0s
+    
+mqtt:
+  broker: thefalsehome.duckdns.org
+  # broker: homeassistant.local
+  port: 8883
+  username: mosquitto
+  password: !secret mqtt_password
+  discovery_prefix: ${mqtt_prefix}/homeassistant
+  log_topic: ${mqtt_prefix}/logs
+  skip_cert_cn_check: true
+  idf_send_async: false
+  certificate_authority: !secret certfile
+
+# Remove Incompatable Components
+light:
+  - id: !remove internal_led
+sensor:
+  - id: !remove hall_sensor
+  - id: !remove i2c_devices
