@@ -23,7 +23,7 @@ jobs:
       matrix:
         #### Modify below here to match your project ####
         file:
-          - aquapi_mqtt_config.yaml
+          - aquapi_mqtt_config
         #### Modify above here to match your project ####
 
         esphome-version:
