@@ -17,34 +17,3 @@ packages:
   TheRealFalseReality.ezo_pmp: github://TheRealFalseReality/aquapi/common/ezo_pmp.yaml@main
   TheRealFalseReality.ezo_pmp_duo: github://TheRealFalseReality/aquapi/common/ezo_pmp_duo.yaml@main
   # TheRealFalseReality.debug: github://TheRealFalseReality/aquapi/common/debug.yaml
-
-# Remove and Edit Incompatable Components
-sensor:
-  - id: !remove i2c_devices
-button:
-  - id: !remove read_ph
-  # Read pH Probe
-  - platform: template
-    name: pH - Read
-    id: read_ph
-    icon: mdi:read
-    entity_category: "Config"
-    on_press:
-      then:
-        - lambda: |-
-            id(ph_ezo).send_custom("R");
-    web_server:
-      sorting_group_id: sorting_group_ph
-
-  # Read pH Probe
-  - platform: template
-    name: EC - Read
-    id: read_ph
-    icon: mdi:read
-    entity_category: "Config"
-    on_press:
-      then:
-        - lambda: |-
-            id(ph_ezo).send_custom("R");
-    web_server:
-      sorting_group_id: sorting_group_ph
