@@ -38,7 +38,5 @@ mqtt:
   certificate_authority: !secret certfile
 
 # Remove Incompatable Components
-light:
-  - id: !remove internal_led
 sensor:
   - id: !remove i2c_devices
