@@ -15,7 +15,7 @@ jobs:
     with:
       #### Modify below here to match your project ####
       files: |
-        aquapi_mqtt_config.yaml
+        aquapi_mqtt_config
       esphome-version: latest
       # combined-name: project-template
       #### Modify above here to match your project ####
