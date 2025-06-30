@@ -41,5 +41,4 @@ mqtt:
 light:
   - id: !remove internal_led
 sensor:
-  - id: !remove hall_sensor
   - id: !remove i2c_devices
