@@ -12,6 +12,10 @@ The Aquarium meets the Smart Home!
 AquaPi for ESPHome is a project that helps you build a powerful aquarium monitoring and automation system using affordable [ESPHome](https://esphome.io/) devices and [Home Assistant](https://www.home-assistant.io/installation/).
 Make endless automations and monitor temperature, water level, and upgrade for advanced aquarium monitoring: pH, salinity, dissolved oxygen, and more (using EZO circuits and probes).  
 
+**# TODO:** 
+* Increase Firmware check interval
+* Make Automation to auto-update when new certfile is updated
+
 Why use AquaPi?
 
 - **Open-source**: Freely available for anyone to access, modify, and contribute to.
