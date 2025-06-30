@@ -54,3 +54,73 @@ text_sensor:
     entity_category: "diagnostic"
     web_server:
       sorting_group_id: sorting_group_diagnostic
+
+# Remove Incompatable Components
+sensor:
+  - id: !remove i2c_devices
+button:
+  - id: !remove read_ph
+  # Read pH Probe
+  - platform: template
+    name: pH - Read
+    id: read_ph
+    icon: mdi:read
+    entity_category: "Config"
+    on_press:
+      then:
+        - lambda: |-
+            id(ph_ezo).send_custom("R");
+    web_server:
+      sorting_group_id: sorting_group_ph
+  - id: !remove read_ec
+  # Read EC Probe
+  - platform: template
+    name: EC - Read
+    id: read_ec
+    icon: mdi:read
+    entity_category: "Config"
+    on_press:
+      then:
+        - lambda: |-
+            id(ec_ezo).send_custom("R");
+    web_server:
+      sorting_group_id: sorting_group_ec
+  - id: !remove read_orp
+  # Read ORP Probe
+  - platform: template
+    name: ORP - Read
+    id: read_orp
+    icon: mdi:read
+    entity_category: "Config"
+    on_press:
+      then:
+        - lambda: |-
+            id(orp_ezo).send_custom("R");
+    web_server:
+      sorting_group_id: sorting_group_orp
+  - id: !remove read_co2
+  # Read CO2 Probe
+  - platform: template
+    name: CO2 - Read
+    id: read_co2
+    icon: mdi:read
+    entity_category: "Config"
+    on_press:
+      then:
+        - lambda: |-
+            id(co2_ezo).send_custom("R");
+    web_server:
+      sorting_group_id: sorting_group_co2
+  - id: !remove read_do
+  # Read DO Probe
+  - platform: template
+    name: DO - Read
+    id: read_do
+    icon: mdi:read
+    entity_category: "Config"
+    on_press:
+      then:
+        - lambda: |-
+            id(do_ezo).send_custom("R");
+    web_server:
+      sorting_group_id: sorting_group_do
