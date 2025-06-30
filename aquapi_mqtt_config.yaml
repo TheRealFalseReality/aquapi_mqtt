@@ -6,7 +6,6 @@ packages:
   ota_https: !include common/ota_https.yaml
   aquapi_mqtt: !include common/aquapi_mqtt.yaml
   TheRealFalseReality.device_base: github://TheRealFalseReality/aquapi/common/device_base.yaml@main
-  TheRealFalseReality.aquapi_mqtt_base: github://TheRealFalseReality/MyESPHome/aquapi_mqtt_base.yaml@main
   TheRealFalseReality.ph: github://TheRealFalseReality/aquapi/common/ezo_ph.yaml
   TheRealFalseReality.ec: github://TheRealFalseReality/aquapi/common/ezo_ec.yaml
   TheRealFalseReality.dallas: github://TheRealFalseReality/aquapi/common/temperature_dallas.yaml
