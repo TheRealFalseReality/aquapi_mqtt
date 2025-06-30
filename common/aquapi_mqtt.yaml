@@ -56,6 +56,8 @@ text_sensor:
       sorting_group_id: sorting_group_diagnostic
 
 # Remove Incompatable Components
+light:
+  - id: !remove internal_led
 sensor:
   - id: !remove i2c_devices
 button:
