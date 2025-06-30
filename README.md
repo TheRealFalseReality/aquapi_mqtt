@@ -15,6 +15,7 @@ Make endless automations and monitor temperature, water level, and upgrade for a
 **# TODO:** 
 * Increase Firmware check interval
 * Make Automation to auto-update when new certfile is updated
+* Remove Status LED
 
 Why use AquaPi?
 
