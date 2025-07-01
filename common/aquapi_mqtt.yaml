@@ -17,18 +17,6 @@ esp32:
 
 api: 
   reboot_timeout: 0s
-    
-mqtt:
-  broker: thefalsehome.duckdns.org
-  # broker: homeassistant.local
-  port: 8883
-  username: mosquitto
-  password: !secret mqtt_password
-  discovery_prefix: ${name}/homeassistant
-  log_topic: ${name}/logs
-  skip_cert_cn_check: true
-  idf_send_async: false
-  certificate_authority: !secret certfile
       
 text_sensor: 
   # AquaPi Version
@@ -56,6 +44,8 @@ text_sensor:
       sorting_group_id: sorting_group_diagnostic
 
 # Remove Incompatable Components
+light:
+  - id: !remove internal_led
 sensor:
   - id: !remove i2c_devices
 button:
