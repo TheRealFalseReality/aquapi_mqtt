@@ -114,3 +114,16 @@ button:
             id(do_ezo).send_custom("R");
     web_server:
       sorting_group_id: sorting_group_do
+
+# AquaPi MQTT
+mqtt:
+  broker: thefalsehome.duckdns.org
+  port: 8883
+  username: mosquitto
+  password: !secret mqtt_password
+  discovery_prefix: ${mqtt_prefix}/homeassistant
+  log_topic: ${mqtt_prefix}/logs
+  skip_cert_cn_check: true
+  idf_send_async: false
+  certificate_authority: !secret certfile
+      
