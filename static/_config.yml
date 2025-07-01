@@ -3,7 +3,7 @@ logo: assets/image/AquaPi Logo Blue.ico
 description: Powered by HomeAssistant & ESPHome
 show_downloads: false
 google_analytics: G-BPGR2QSCVL
-theme: jekyll-theme-minima
+# theme: jekyll-theme-minima
 remote_theme: jekyll/minima
 minima:
   skin: dark
