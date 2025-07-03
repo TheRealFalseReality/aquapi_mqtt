@@ -9,7 +9,7 @@ http_request:
 
 update:
   - platform: http_request
-    name: AquaPi M<QTT Firmware Update
+    name: AquaPi MQTT Firmware Update
     id: update_firmware_sensor
     entity_category: 'diagnostic'
     update_interval: ${ota_update_interval}
