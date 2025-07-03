@@ -15,6 +15,9 @@ update:
     update_interval: ${ota_update_interval}
     icon: mdi:update
     source: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt.manifest.json
+    on_update_available:
+      then:
+        - button.press: update_firmware
     web_server:
       sorting_group_id: sorting_group_diagnostic
 
@@ -28,7 +31,10 @@ button:
     web_server:
       sorting_group_id: sorting_group_config
     on_press: 
-      then:
-        - ota.http_request.flash:
-            md5_url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin.md5
-            url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin
+        - if:
+          condition: 
+            - update.is_available: update_firmware_sensor
+          then:
+            - ota.http_request.flash:
+                md5_url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin.md5
+                url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin
