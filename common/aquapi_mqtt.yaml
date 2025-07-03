@@ -1,6 +1,6 @@
 substitutions:
   # names
-  name: "aquapi_mqtt"
+  name: "aquapi-mqtt"
   friendly_name: "AquaPi MQTT"
   comment: "AquaPi MQTT ESP32 - Aquarium Controller & Monitor"
   project_name: "therealfalsereality.aquapi_mqtt"

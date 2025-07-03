@@ -1,23 +1,27 @@
-substitutions:
-  ota_update_interval: 24h
-
 ota:
   - platform: http_request
 
 http_request:
   verify_ssl: false
 
+interval:
+  - interval: 1min
+    then:
+      - if:
+          condition:
+            update.is_available
+          then:
+            - update.perform
+
 update:
   - platform: http_request
     name: AquaPi MQTT Firmware Update
     id: update_firmware_sensor
     entity_category: 'diagnostic'
-    update_interval: ${ota_update_interval}
     icon: mdi:update
     source: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt.manifest.json
-    on_update_available:
-      then:
-        - button.press: update_firmware
+    # on_update_available:
+    #   - update.perform: update_firmware_sensor
     web_server:
       sorting_group_id: sorting_group_diagnostic
 
