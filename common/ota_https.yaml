@@ -32,9 +32,9 @@ button:
       sorting_group_id: sorting_group_config
     on_press: 
         - if:
-          condition: 
-            - update.is_available: update_firmware_sensor
-          then:
-            - ota.http_request.flash:
-                md5_url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin.md5
-                url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin
+            condition: 
+              - update.is_available: update_firmware_sensor
+            then:
+              - ota.http_request.flash:
+                  md5_url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin.md5
+                  url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin
