@@ -19,7 +19,7 @@ update:
     id: update_firmware_sensor
     entity_category: 'diagnostic'
     icon: mdi:update
-    source: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt.manifest.json
+    source: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi-mqtt.manifest.json
     # on_update_available:
     #   - update.perform: update_firmware_sensor
     web_server:
@@ -40,5 +40,5 @@ button:
               - update.is_available: update_firmware_sensor
             then:
               - ota.http_request.flash:
-                  md5_url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin.md5
-                  url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi_mqtt-esp32.ota.bin
+                  md5_url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi-mqtt-esp32.ota.bin.md5
+                  url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi-mqtt-esp32.ota.bin
