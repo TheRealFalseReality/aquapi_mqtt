@@ -25,6 +25,13 @@ update:
     web_server:
       sorting_group_id: sorting_group_diagnostic
 
+switch:
+  - platform: gpio
+    pin: GPIO2
+    name: "Status LED"
+    id: status_switch
+    internal: True
+
 button:
   - platform: template
     id: update_firmware
@@ -35,6 +42,7 @@ button:
     web_server:
       sorting_group_id: sorting_group_config
     on_press: 
+      - switch.turn_on: status_switch
       - ota.http_request.flash:
           md5_url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi-mqtt-esp32.ota.bin.md5
           url: https://therealfalsereality.github.io/aquapi_mqtt/firmware/aquapi-mqtt-esp32.ota.bin
