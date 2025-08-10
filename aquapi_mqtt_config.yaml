@@ -1,6 +1,6 @@
 substitutions:
   # App Version
-  app_version: "25.8.1.2"
+  app_version: "25.8.1.3"
 
 packages:  
   TheRealFalseReality.device_base: github://TheRealFalseReality/aquapi/common/device_base.yaml@main
