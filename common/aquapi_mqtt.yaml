@@ -6,6 +6,10 @@ substitutions:
   project_name: "therealfalsereality.aquapi_mqtt"
   sorting_group_name: "AquaPi "
   import: "false"
+  # MQTT Configuration - can be overridden with environment variables
+  mqtt_broker: !env_var mqtt_broker "localhost"
+  mqtt_password: !env_var mqtt_password ""
+  certfile: !env_var certfile ""
 
 dashboard_import:
   package_import_url: github://TheRealFalseReality/aquapi_mqtt/aquapi_mqtt_config.yaml@main

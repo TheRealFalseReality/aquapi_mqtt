@@ -12,6 +12,9 @@ jobs:
   build-firmware:
     name: Build Firmware
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config: ['aquapi_mqtt_config.yaml', 'aquapi_mqtt_config.factory.yaml']
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -28,13 +31,13 @@ jobs:
       
       - name: Replace project version
         run: |
-          sed -i "s/version: dev/version: ${{ steps.version.outputs.version }}/g" aquapi_mqtt_config.yaml
+          sed -i "s/version: dev/version: ${{ steps.version.outputs.version }}/g" ${{ matrix.config }}
       
       - name: Build Firmware
         uses: esphome/build-action@v7
         id: esphome-build
         with:
-          yaml-file: aquapi_mqtt_config.yaml
+          yaml-file: ${{ matrix.config }}
           version: latest
           complete-manifest: true
           release-summary: ${{ github.event.release.body }}

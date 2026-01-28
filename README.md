@@ -130,9 +130,9 @@ This repository uses GitHub Actions to automatically build and publish firmware.
 
 - **`MQTT_BROKER`**: The MQTT broker hostname or IP address (e.g., `mqtt.example.com`)
 - **`MQTT_PASSWORD`**: The password for the MQTT user (username is hardcoded as `mosquitto`)
-- **`CERTFILE`**: The certificate authority certificate file content in PEM format for secure MQTT connections
+- **`CERTFILE`**: The certificate authority certificate file content in PEM format for secure MQTT connections. When setting this secret in GitHub, paste the entire certificate including the `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` lines. GitHub will automatically handle newlines correctly.
 
-These secrets are automatically injected as environment variables during the firmware build process in both the CI and release workflows.
+These secrets are automatically injected as environment variables during the firmware build process in both the CI and release workflows. For local development, you can create a `secrets.yaml` file or set these as environment variables before building.
 
 ## Blueprints
 **[See Wiki](https://github.com/TheRealFalseReality/aquapi/wiki/Blueprints)**  
