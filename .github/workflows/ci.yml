@@ -32,14 +32,22 @@ jobs:
           - dev
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: ESPHome ${{ matrix.esphome-version }}
         uses: esphome/build-action@v7
         with:
           yaml-file: ${{ matrix.file }}.yaml
           version: ${{ matrix.esphome-version }}
+        env:
+          mqtt_broker: ${{ secrets.MQTT_BROKER }}
+          mqtt_password: ${{ secrets.MQTT_PASSWORD }}
+          certfile: ${{ secrets.CERTFILE }}
       - name: ESPHome ${{ matrix.esphome-version }} Factory
         uses: esphome/build-action@v7
         with:
           yaml-file: ${{ matrix.file }}.factory.yaml
           version: ${{ matrix.esphome-version }}
+        env:
+          mqtt_broker: ${{ secrets.MQTT_BROKER }}
+          mqtt_password: ${{ secrets.MQTT_PASSWORD }}
+          certfile: ${{ secrets.CERTFILE }}
