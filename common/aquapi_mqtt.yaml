@@ -4,7 +4,7 @@ substitutions:
   friendly_name: "AquaPi MQTT"
   comment: "AquaPi MQTT ESP32 - Aquarium Controller & Monitor"
   project_name: "therealfalsereality.aquapi_mqtt"
-  sorting_group_name: "AquaPi "
+  sorting_group_name: "AquaPi"
   import: "false"
   mqtt_broker: "localhost"
   mqtt_password: ""
