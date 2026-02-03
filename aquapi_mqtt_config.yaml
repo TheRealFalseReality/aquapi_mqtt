@@ -1,19 +1,20 @@
 substitutions:
   # App Version
-  app_version: "25.8.1.3"
+  app_version: "26.2.0"
 
 packages:  
   TheRealFalseReality.device_base: github://TheRealFalseReality/aquapi/common/device_base.yaml@main
   TheRealFalseReality.dallas: github://TheRealFalseReality/aquapi/common/temperature_dallas.yaml@main
   TheRealFalseReality.water_level: github://TheRealFalseReality/aquapi/common/water_level.yaml@main
   TheRealFalseReality.binary: github://TheRealFalseReality/aquapi/common/binary.yaml@main
-  TheRealFalseReality.ph: github://TheRealFalseReality/aquapi/common/ezo_ph.yaml@main
-  TheRealFalseReality.ec: github://TheRealFalseReality/aquapi/common/ezo_ec.yaml@main
-  TheRealFalseReality.ezo_orp: github://TheRealFalseReality/aquapi/common/ezo_orp.yaml@main
-  TheRealFalseReality.ezo_co2: github://TheRealFalseReality/aquapi/common/ezo_co2.yaml@main
-  TheRealFalseReality.ezo_do: github://TheRealFalseReality/aquapi/common/ezo_do.yaml@main
-  TheRealFalseReality.ezo_pmp: github://TheRealFalseReality/aquapi/common/ezo_pmp.yaml@main
-  TheRealFalseReality.ezo_pmp_duo: github://TheRealFalseReality/aquapi/common/ezo_pmp_duo.yaml@main
+  TheRealFalseReality.i2c_detection: github://TheRealFalseReality/aquapi/common/i2c_detection.yaml
+  # TheRealFalseReality.ph: github://TheRealFalseReality/aquapi/common/ezo_ph.yaml@main
+  # TheRealFalseReality.ec: github://TheRealFalseReality/aquapi/common/ezo_ec.yaml@main
+  # TheRealFalseReality.ezo_orp: github://TheRealFalseReality/aquapi/common/ezo_orp.yaml@main
+  # TheRealFalseReality.ezo_co2: github://TheRealFalseReality/aquapi/common/ezo_co2.yaml@main
+  # TheRealFalseReality.ezo_do: github://TheRealFalseReality/aquapi/common/ezo_do.yaml@main
+  # TheRealFalseReality.ezo_pmp: github://TheRealFalseReality/aquapi/common/ezo_pmp.yaml@main
+  # TheRealFalseReality.ezo_pmp_duo: github://TheRealFalseReality/aquapi/common/ezo_pmp_duo.yaml@main
   # TheRealFalseReality.debug: github://TheRealFalseReality/aquapi/common/debug.yaml
   ota_https: !include common/ota_https.yaml
   aquapi_mqtt: !include common/aquapi_mqtt.yaml
