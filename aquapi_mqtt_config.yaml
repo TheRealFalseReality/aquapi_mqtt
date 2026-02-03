@@ -7,7 +7,7 @@ packages:
   TheRealFalseReality.dallas: github://TheRealFalseReality/aquapi/common/temperature_dallas.yaml@main
   TheRealFalseReality.water_level: github://TheRealFalseReality/aquapi/common/water_level.yaml@main
   TheRealFalseReality.binary: github://TheRealFalseReality/aquapi/common/binary.yaml@main
-  i2c_detection: !include github://TheRealFalseReality/aquapi/common/i2c_detection.yaml
+  TheRealFalseReality.i2c_detection: github://TheRealFalseReality/aquapi/common/i2c_detection.yaml
   # TheRealFalseReality.ph: github://TheRealFalseReality/aquapi/common/ezo_ph.yaml@main
   # TheRealFalseReality.ec: github://TheRealFalseReality/aquapi/common/ezo_ec.yaml@main
   # TheRealFalseReality.ezo_orp: github://TheRealFalseReality/aquapi/common/ezo_orp.yaml@main
