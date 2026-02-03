@@ -6,8 +6,10 @@ substitutions:
   project_name: "therealfalsereality.aquapi_mqtt"
   sorting_group_name: "AquaPi "
   import: "false"
-  mqtt_broker: !env_var mqtt_broker "localhost"
-  mqtt_password: !env_var mqtt_password ""
+  mqtt_broker: "localhost"
+  mqtt_password: ""
+  mqtt_port: "1883"
+  mqtt_user: "mosquitto"
 
 dashboard_import:
   package_import_url: github://TheRealFalseReality/aquapi_mqtt/aquapi_mqtt_config.yaml@main
@@ -51,8 +53,8 @@ light:
 mqtt:
   # broker: !secret mqtt_broker
   broker: ${mqtt_broker}
-  port: 8883
-  username: mosquitto
+  port: ${mqtt_port}
+  username: ${mqtt_user}
   # password: !secret mqtt_password
   password: ${mqtt_password}
   # discovery_prefix: ${mqtt_prefix}/homeassistant
