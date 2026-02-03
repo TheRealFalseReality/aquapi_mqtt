@@ -21,21 +21,21 @@ api:
   reboot_timeout: 0s
       
 text_sensor: 
-  # AquaPi Version
+  # AquaPi MQTT Version
   - platform: template
-    name: "AquaPi Version"
-    id: aquapi_version
+    name: "AquaPi MQTT Version"
+    id: aquapi_version_mqtt
     icon: mdi:update
     lambda: |-
-      return {"${app_version}"};
+      return {"${app_version_mqtt}"};
     entity_category: "diagnostic"
     web_server:
       sorting_group_id: sorting_group_diagnostic
 
   # GitHub Project URL
   - platform: template
-    name: GitHub
-    id: github
+    name: GitHub MQTT
+    id: github_mqtt
     icon: mdi:github
     lambda: |-
       return {"github.com/TheRealFalseReality/aquapi_mqtt"};
