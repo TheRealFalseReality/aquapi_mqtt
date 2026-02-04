@@ -52,15 +52,12 @@ light:
   
 # AquaPi MQTT
 mqtt:
-  # broker: !secret mqtt_broker
   broker: ${mqtt_broker}
   port: ${mqtt_port}
   username: ${mqtt_user}
-  # password: !secret mqtt_password
   password: ${mqtt_password}
   # discovery_prefix: ${mqtt_prefix}/homeassistant
   # log_topic: ${name}/logs
   skip_cert_cn_check: true
   idf_send_async: false
-  # certificate_authority: !secret mqtt_certifile
   certificate_authority: ${mqtt_certifile}
