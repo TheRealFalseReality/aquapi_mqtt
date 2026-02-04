@@ -36,15 +36,15 @@ text_sensor:
       sorting_group_id: sorting_group_diagnostic
 
   # GitHub Project URL
-  - platform: template
-    name: GitHub MQTT
-    id: github_url_mqtt
-    icon: mdi:github
-    lambda: |-
-      return {"github.com/TheRealFalseReality/aquapi_mqtt"};
-    entity_category: "diagnostic"
-    web_server:
-      sorting_group_id: sorting_group_diagnostic
+  # - platform: template
+  #   name: GitHub MQTT
+  #   id: github_url_mqtt
+  #   icon: mdi:github
+  #   lambda: |-
+  #     return {"github.com/TheRealFalseReality/aquapi_mqtt"};
+  #   entity_category: "diagnostic"
+  #   web_server:
+  #     sorting_group_id: sorting_group_diagnostic
 
 # Remove Incompatable Components
 light:
