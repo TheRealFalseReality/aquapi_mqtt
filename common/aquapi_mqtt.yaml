@@ -38,7 +38,7 @@ text_sensor:
   # GitHub Project URL
   - platform: template
     name: GitHub MQTT
-    id: github_mqtt
+    id: github_url_mqtt
     icon: mdi:github
     lambda: |-
       return {"github.com/TheRealFalseReality/aquapi_mqtt"};
